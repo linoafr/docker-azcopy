@@ -15,6 +15,12 @@ Si vous avez besoin de copier des blobs depuis / vers un réperoire local vous a
 docker run --rm -it -v ${PWD}/blobs:/blobs linoa/azcopy copy $srcUrl "/blobs" --recursive
 ```
 
+Si vous avez besoin de copier des blobs depuis / vers Azurite vous devez ajouter les paramètres `--network=host` et `--from-to`
+
+```
+docker run --rm -it -v ${PWD}/blobs:/blobs --network=host linoa/azcopy copy "/blobs" $azuriteUrl --from-to LocalBlob --recursive
+```
+
 ---
 
 # docker-azcopy : :us:
@@ -33,4 +39,10 @@ If you need to copy blobs to / from a local directory you have `/blobs` mount po
 
 ```
 docker run --rm -it -v ${PWD}/blobs:/blobs linoa/azcopy copy $srcUrl "/blobs" --recursive
+```
+
+If you need to copy blobs to / from Azurite you have to add this parameters `--network=host` and `--from-to`
+
+```
+docker run --rm -it -v ${PWD}/blobs:/blobs --network=host linoa/azcopy copy "/blobs" $azuriteUrl --from-to LocalBlob --recursive
 ```
