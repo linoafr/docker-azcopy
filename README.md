@@ -27,7 +27,7 @@ docker run --rm -it -v ${PWD}/blobs:/blobs --network=host linoa/azcopy copy "/bl
 
 This docker image is provided until Microsoft offers an official one.
 
-Issue sur github: https://github.com/Azure/azure-storage-azcopy/issues/423
+Issue on github: https://github.com/Azure/azure-storage-azcopy/issues/423
 
 This image is inspired by solutions found on the GitHub issue
 

@@ -1,9 +1,9 @@
-ARG ALPINE_VERSION=3.13.2
+ARG ALPINE_VERSION=3.13.5
 
 FROM alpine:${ALPINE_VERSION} AS build
 
-ENV RELEASE_STAMP=20210226
-ENV RELEASE_VERSION=10.9.0
+ENV RELEASE_STAMP=20210415
+ENV RELEASE_VERSION=10.10.0
 
 RUN apk add --no-cache wget \
 &&	wget https://azcopyvnext.azureedge.net/release${RELEASE_STAMP}/azcopy_linux_amd64_${RELEASE_VERSION}.tar.gz -O /tmp/azcopy.tgz \
